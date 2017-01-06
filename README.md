@@ -1,4 +1,4 @@
-##CSC3222 Gaming Simulations
+##CSC3224 Computer Games Development
 
 ###Overview
 The game uses a custom entity component system instead of deep object hierarchies. 
@@ -22,8 +22,14 @@ A list of systems active in this demo:
 - PhysicsSystem (Updates velocity and position components)
 - RenderingSystem (Draws all render entities to screen / displays debug infomation )
 
-###Screenshot
+###Screenshots
+![Debug](https://github.com/StephenCathcart/csc3224-computer-games-development/blob/master/screenshots/debug.png)
 
+![Game](https://github.com/StephenCathcart/csc3224-computer-games-development/blob/master/screenshots/game.png)
+
+![Paused](https://github.com/StephenCathcart/csc3224-computer-games-development/blob/master/screenshots/paused.png)
+
+![Menu](https://github.com/StephenCathcart/csc3224-computer-games-development/blob/master/screenshots/menu.png)
 
 ###References
 - Menu theme song: Klendathu Drop - Starship Troopers Soundtrack
