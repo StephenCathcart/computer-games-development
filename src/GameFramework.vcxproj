@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B55689F1-EF9A-42C7-ACED-46DAA6FE6F04}</ProjectGuid>
+    <RootNamespace>GameFramework</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(SolutionDir)\glew-1.9.0\include;$(SolutionDir)\SFML-2.1\include;$(SolutionDir)\Assimp\include;$(SolutionDir)\SOIL;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LibraryPath>$(SolutionDir)\glew-1.9.0\lib;$(SolutionDir)\SFML-2.1\lib;$(SolutionDir)\Assimp\lib\x86;$(SolutionDir)\SOIL\Debug;$(LibraryPath)</LibraryPath>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(SolutionDir)\glew-1.9.0\include;$(SolutionDir)\SFML-2.1\include;$(SolutionDir)\assimp\include;$(SolutionDir)\SOIL;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LibraryPath>$(SolutionDir)\glew-1.9.0\lib;$(SolutionDir)\SFML-2.1\lib;$(SolutionDir)\Assimp\lib\x86;$(SolutionDir)\SOIL\Debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)\GameFramework\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <EnablePREfast>false</EnablePREfast>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glew32s.lib;opengl32.lib;sfml-graphics-d.lib;sfml-audio-d.lib;sfml-window-d.lib;sfml-system-d.lib;sfml-network-d.lib;assimp.lib;SOIL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\GameFramework\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>SFML_DYNAMIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>glew32s.lib;opengl32.lib;sfml-graphics.lib;sfml-audio.lib;sfml-window.lib;sfml-system.lib;sfml-network.lib;assimp.lib;SOIL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="BombActiveMessage.cpp" />
+    <ClCompile Include="BombComponent.cpp" />
+    <ClCompile Include="BulletCollisionMessage.cpp" />
+    <ClCompile Include="BulletComponent.cpp" />
+    <ClCompile Include="BulletList.cpp" />
+    <ClCompile Include="BulletMessage.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="CollisionSystem.cpp" />
+    <ClCompile Include="ControlsMessage.cpp" />
+    <ClCompile Include="CrateComponent.cpp" />
+    <ClCompile Include="EnemyCollisionMessage.cpp" />
+    <ClCompile Include="EnemyComponent.cpp" />
+    <ClCompile Include="EnemyList.cpp" />
+    <ClCompile Include="EnemyMessage.cpp" />
+    <ClCompile Include="EnemyTimer.cpp" />
+    <ClCompile Include="FPS.cpp" />
+    <ClCompile Include="GameState.cpp" />
+    <ClCompile Include="HighScoreMessage.cpp" />
+    <ClCompile Include="JoyStickMessage.cpp" />
+    <ClCompile Include="KeyEventMessage.cpp" />
+    <ClCompile Include="GameComponent.cpp" />
+    <ClCompile Include="GameSystemManager.cpp" />
+    <ClCompile Include="BaseMessage.cpp" />
+    <ClCompile Include="LoadingMessage.cpp" />
+    <ClCompile Include="LogicSystem.cpp" />
+    <ClCompile Include="MenuItemComponent.cpp" />
+    <ClCompile Include="MultiplierComponent.cpp" />
+    <ClCompile Include="Paths.cpp" />
+    <ClCompile Include="FreeList.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameEntity.cpp" />
+    <ClCompile Include="GameEntityManager.cpp" />
+    <ClCompile Include="GameSystem.cpp" />
+    <ClCompile Include="HealthComponent.cpp" />
+    <ClCompile Include="InputSystem.cpp" />
+    <ClCompile Include="Light.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Mesh.cpp" />
+    <ClCompile Include="PickUpCollisionMessage.cpp" />
+    <ClCompile Include="PickUpComponent.cpp" />
+    <ClCompile Include="PickUpList.cpp" />
+    <ClCompile Include="PickUpMessage.cpp" />
+    <ClCompile Include="PlayerComponent.cpp" />
+    <ClCompile Include="RenderComponent.cpp" />
+    <ClCompile Include="PhysicsSystem.cpp" />
+    <ClCompile Include="PositionComponent.cpp" />
+    <ClCompile Include="GameResourceManager.cpp" />
+    <ClCompile Include="RenderingSystem.cpp" />
+    <ClCompile Include="ScoreComponent.cpp" />
+    <ClCompile Include="Settings.cpp" />
+    <ClCompile Include="SFRenderComponent.cpp" />
+    <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="ShieldComponent.cpp" />
+    <ClCompile Include="TextComponent.cpp" />
+    <ClCompile Include="VelocityComponent.cpp" />
+    <ClCompile Include="Xbox.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BombActiveMessage.h" />
+    <ClInclude Include="BombComponent.h" />
+    <ClInclude Include="BulletCollisionMessage.h" />
+    <ClInclude Include="BulletComponent.h" />
+    <ClInclude Include="BulletList.h" />
+    <ClInclude Include="BulletMessage.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="CollisionSystem.h" />
+    <ClInclude Include="ControlsMessage.h" />
+    <ClInclude Include="CrateComponent.h" />
+    <ClInclude Include="EnemyCollisionMessage.h" />
+    <ClInclude Include="EnemyComponent.h" />
+    <ClInclude Include="EnemyList.h" />
+    <ClInclude Include="EnemyMessage.h" />
+    <ClInclude Include="EnemyTimer.h" />
+    <ClInclude Include="FPS.h" />
+    <ClInclude Include="GameState.h" />
+    <ClInclude Include="HighScoreMessage.h" />
+    <ClInclude Include="JoyStickMessage.h" />
+    <ClInclude Include="KeyEventMessage.h" />
+    <ClInclude Include="GameComponent.h" />
+    <ClInclude Include="GameSystemManager.h" />
+    <ClInclude Include="BaseMessage.h" />
+    <ClInclude Include="LoadingMessage.h" />
+    <ClInclude Include="LogicSystem.h" />
+    <ClInclude Include="MenuItemComponent.h" />
+    <ClInclude Include="MultiplierComponent.h" />
+    <ClInclude Include="Paths.h" />
+    <ClInclude Include="FreeList.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="GameEntity.h" />
+    <ClInclude Include="GameEntityManager.h" />
+    <ClInclude Include="GameSystem.h" />
+    <ClInclude Include="HealthComponent.h" />
+    <ClInclude Include="InputSystem.h" />
+    <ClInclude Include="Light.h" />
+    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="PickUpCollisionMessage.h" />
+    <ClInclude Include="PickUpComponent.h" />
+    <ClInclude Include="PickUpList.h" />
+    <ClInclude Include="PickUpMessage.h" />
+    <ClInclude Include="PlayerComponent.h" />
+    <ClInclude Include="RenderComponent.h" />
+    <ClInclude Include="PhysicsSystem.h" />
+    <ClInclude Include="PositionComponent.h" />
+    <ClInclude Include="GameResourceManager.h" />
+    <ClInclude Include="RenderingSystem.h" />
+    <ClInclude Include="ScoreComponent.h" />
+    <ClInclude Include="Settings.h" />
+    <ClInclude Include="SFRenderComponent.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="ShieldComponent.h" />
+    <ClInclude Include="TextComponent.h" />
+    <ClInclude Include="VelocityComponent.h" />
+    <ClInclude Include="Xbox.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
